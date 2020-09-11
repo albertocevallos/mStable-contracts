@@ -123,8 +123,8 @@ contract AaveIntegration is InitializableAbstractIntegration {
      * @param _platformAddress  Address of the platform
      */
     function migrate(address[] calldata _bAssets, address[] calldata _newATokens, address _platformAddress)
-    external
-    onlyGovernor
+        external
+        onlyGovernor
     {
         // Check _bAsset and newAToken array lengths are the same
         require(_bAssets.length == _newATokens.length, "_bAssets and _newATokens arrays must be the same length");
